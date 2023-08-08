@@ -1,0 +1,17 @@
+<h1>Otp#otp_verification</h1>
+<p>Find me in app/views/otp/otp_verification.html.erb</p>
+<h1>OTP Verification</h1>
+
+<%= form_tag(otp_verify_otp_path, method: :post) do %>
+  <div>
+    <%= label_tag(:mobile_number, 'Mobile Number') %>
+    <%= text_field_tag(:mobile_number) %>
+  </div>
+
+  <div>
+    <%= label_tag(:otp, 'OTP') %>
+    <%= text_field_tag(:otp) %>
+  </div>
+
+  <%= submit_tag('Verify OTP') %>
+<% end %>
